@@ -25,6 +25,6 @@ The main RMTS board has four LEDs to indicate system status. The first is the `P
 | Slow Blinking            | System is in `results` state. The results can be viewed in the application. It can be safely powered off as the results are on the SD card. |
 
 ## Trigger Mode
-Coming Soon
+This input enables the use of an external ignition system. Set up the program as if you were going to fire using the board. Instead of connecting the igniter to the ignition port, simply connect the igniter in parallel with the trigger port on the board. The board will automatically begin recording as soon as it detects a large voltage spike. This trigger port is opto-isolated, so there is no risk of accidental ignition. It also will not trigger from a continuity check. As soon as the motor is done firing, go through the usual procedure to end the test (i.e. press the stop button).
 ## Troubleshooting
 Coming Soon
