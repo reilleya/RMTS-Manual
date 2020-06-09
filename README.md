@@ -3,13 +3,9 @@ RMTS is a complete set of test stand electronics in a single device for amateur 
 ## Components
 The system consists of a transmitter, receiver, and an application that is run on the user's computer. The transmitter is the larger of the two circuit boards included in the system and has terminal blocks around the edge for connecting transducers and the igniter. The receiver is the smaller board and has two connectors, one USB port for connecting to the user's computer and an RP-SMA jack for the antenna. The software can be downloaded from [here](https://github.com/reilleya/RMTS-Software/releases).
 ## Using RMTS
-Before using RMTS for the first time you will need to calibrate it. More information about what that entails it found [here](reilley.net).
-To assemble and use the system for a series of static fires, follow [this](reilley.net) guide.
+Before using RMTS for the first time you will need to calibrate it. More information about what that entails it found [here](https://github.com/reilleya/RMTS-Manual#calibration).
+To assemble and use the system for a series of static fires, follow [this](https://github.com/reilleya/RMTS-Manual#firing-procedure) guide.
 ## Connection Diagram
-Coming Soon
-## Setup
-Coming Soon
-## Calibration
 Coming Soon
 ## LED Explanations
 (diagram)
@@ -23,7 +19,12 @@ The main RMTS board has four LEDs to indicate system status. The first is the `P
 | Constant, Rapid Blinking | System is in `error` state. Connect to it with the radio for more details.                                                                  |
 | Off                      | System is in `fire` state. Stop it in the application to view results.                                                                      |
 | Slow Blinking            | System is in `results` state. The results can be viewed in the application. It can be safely powered off as the results are on the SD card. |
-
+## Setup
+Coming Soon
+## Calibration
+Coming Soon
+## Firing Procedure
+Coming Soon
 ## Trigger Mode
 Coming Soon
 ## Troubleshooting
