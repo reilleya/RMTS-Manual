@@ -40,3 +40,10 @@ Coming Soon
 This input enables the use of an external ignition system. Set up the program as if you were going to fire using the board. Instead of connecting the igniter to the ignition port, simply connect the igniter in parallel with the trigger port on the board. The board will automatically begin recording as soon as it detects a large voltage spike. This trigger port is opto-isolated and rectified, so there is no risk of accidental ignition and polarity doesn't matter. It also should not trigger from a continuity check, but it is worth testing to be sure. As soon as the motor is done firing, go through the usual procedure to end the test (i.e. press the stop button).
 ## Troubleshooting
 Coming Soon
+## Glossary
+* Transducer: A sensor that converts some value from the physical world into a signal. In this context, this usually refers to load cells and pressure sensors.
+* ADC: Analog to digital converter. The component on the board that reads from the transducers and outputs a corresponding number.
+* Raw Value: A value directly output by the ADC. Corresponds to a voltage read from a transducer.
+* Converted Value: A value in real-world units obtained by passing a raw value through a calibration function. 
+* Receiver: The smaller device that connects to a user's computer.
+* Transmitter: The larger device that the igniter and transducers are connected to.
