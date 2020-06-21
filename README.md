@@ -1,3 +1,4 @@
+![RMTS Logo](./media/logo_large.svg)
 # Rocket Motor Test System
 RMTS is a complete set of test stand electronics in a single device for amateur motor builders. It was designed to be a simple and safe way to ignite solid rocket motors and collect data from their firing to enable hobbyists to make informed decisions as they iterate on their propellant formulas and motor designs. It is similar in complexity to a standard rocketry altimeter and doesn't require any special skills to use. It is a standalone unit meaning you don't need to leave a computer near the motor. As it is specialized for rocketry, it displays thrust and pressure curves immediately after the firing without needing to pass the data through a spreadsheet. The built in wireless ignition channel reduces the number of devices you need to set up to one and allows you to measure the motor's startup transient as logging begins when the igniter fires.
 ## Components
