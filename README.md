@@ -21,7 +21,10 @@ The main RMTS board has four LEDs to indicate system status. The first is the `P
 | Off                      | System is in `fire` state. Stop it in the application to view results.                                                                      |
 | Slow Blinking            | System is in `results` state. The results can be viewed in the application. It can be safely powered off as the results are on the SD card. |
 ## Setup
-Coming Soon
+### Hardware
+Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#connect-diagram). All system functions require an SD card to be installed. Note that the pyro battery and transducers require a specific polarity! The system may be damaged or produce incorrect results if they are not connected properly. For this reason and to protect the transmitter from damage during tests, it is recommended to mount it in a project enclosure and to attach connectors to the screw terminals so transducers can be plugged in easily. The transmitter is powered by the USB port and will work with any USB backup battery. The included antennas can be swapped for other RP-SMA 2.4 ghz antennas if needed. 
+### Software
+Install the RMTS application on a computer that is convenient to bring to your test site and has at least one USB A port. The latest version can be downloaded [here](https://github.com/reilleya/RMTS-Software/releases). An installer is available for Windows and an executable for Mac OS, but Linux users will have to follow instructions in the readme for that repository. Once the application is installed, configure the desired units on the `Preferences` menu and then proceed to calibration.
 ## Calibration
 RMTS is different from other rocketry electronics you may be familiar with as its sensors are external to the board and can be swapped by the user. This is beneficial as it allows you to use transducers well suited for each motor you fire and may be able to use ones you already have. The downside is that the characteristics of sensors you choose to use cannot be built into the software and have to be deternined by you. The RMTS application includes a workflow to make this process simple, and this guide explains how to use it and what is happening internally.
 ### What is a transducer?
