@@ -62,7 +62,8 @@ At this point, the RMTS transmitter should be powered off and the process repeat
 
 ## Trigger Mode
 ![Trigger Mode](./media/trigger_diagram.svg)
-This input enables the use of an external ignition system. Set up the application as if you were going to fire using the board, but instead of connecting the igniter to the ignition port, simply connect the igniter in parallel with the trigger port on the board. The board will automatically begin recording as soon as it detects a large voltage spike. This trigger port is opto-isolated and rectified, so there is no risk of accidental ignition and polarity doesn't matter. It also should not trigger from a continuity check, but it is worth testing to be sure. As soon as the motor is done firing, go through the usual procedure to end the test (i.e. press the stop button).
+
+This input enables the use of an external ignition system. Set up the application as if you were going to fire using the board, but instead of connecting the igniter to the ignition port, simply connect the igniter in parallel with the trigger port on the board. The board will automatically begin recording as soon as it detects a significant voltage spike. This trigger port is opto-isolated and rectified, so there is no risk of accidental ignition and polarity isn't important. It also should not trigger from a continuity check, but it is worth testing to be sure. As soon as the motor is done firing, go through the usual procedure to end the test by activating and pressing the `Stop` button.
 ## Menu Option Explanations
 | Button                  | Explanation                                                                                                |
 |-------------------------|------------------------------------------------------------------------------------------------------------|
