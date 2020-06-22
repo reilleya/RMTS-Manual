@@ -8,7 +8,7 @@ Before using RMTS for the first time you will need to calibrate it. More informa
 To assemble and use the system for a series of static fires, follow [this](https://github.com/reilleya/RMTS-Manual#firing-procedure) guide.
 
 ## Connection Diagram
-Coming Soon
+![RMTS Logo](./media/all_connectors.svg)
 ## LED Explanations
 (diagram)
 
