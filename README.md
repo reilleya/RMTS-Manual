@@ -10,9 +10,10 @@ To assemble and use the system for a series of static fires, follow [this](https
 ## Connection Diagram
 ![Connnections](./media/all_connectors.svg)
 ## LED Explanations
-(diagram)
+![LEDs](./media/led_diagram.svg)
 
-The main RMTS board has four LEDs to indicate system status. The first is the `Power` indicator, which turns on as soon as the board is connected to a 5V supply. Next to it is the `Status` light, which has a number of blink patterns to show which state the board is currently in. Next is the `Continuity` LED, which indicates that the system has detected continuity throught the igniter circuit, including both the pyro battery and the igniter itself. Finally, the `Firing` indicator shows if the igniter port has a voltage across it. Never connect the igniter while this light is on. If it is on unexpectedly, your RMTS has been damaged.
+
+The main RMTS board has four LEDs to indicate system status. The first is the `Power` indicator, which turns on as soon as the board is connected to a 5V supply. Next to it is the `Status` light, which has a number of blink patterns to show which state the board is currently in. Next is the `Continuity` LED, which indicates that the system has detected continuity throught the igniter circuit, including both the pyro battery and the igniter itself. Finally, the `Firing` indicator shows if the igniter port has a voltage across it. Never connect the igniter while this light is on. If it is on unexpectedly, your RMTS has been damaged. Next to each LED is a pair of through-holes that an external LED can be connected to.
 
 #### Status LED Blink Patterns
 | Pattern                  | Explanation                                                                                                                                 |
