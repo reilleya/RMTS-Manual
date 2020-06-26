@@ -7,8 +7,12 @@ The system consists of a transmitter, receiver, and an application that is run o
 Before using RMTS for the first time you will need to calibrate it. More information about what that entails it found [here](https://github.com/reilleya/RMTS-Manual#calibration).
 To assemble and use the system for a series of static fires, follow [this](https://github.com/reilleya/RMTS-Manual#firing-procedure) guide.
 
+## Board Dimensions
+![Dimensions](./media/drill_pattern.svg)
+
 ## Connection Diagram
 ![Connnections](./media/all_connectors.svg)
+
 ## LED Explanations
 ![LEDs](./media/led_diagram.svg)
 
