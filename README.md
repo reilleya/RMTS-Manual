@@ -13,6 +13,11 @@ To assemble and use the system for a series of static fires, follow [this](https
 ## Connection Diagram
 ![Connnections](./media/all_connectors.svg)
 
+## Transducer Connection
+![Transducer Connections](./media/transducer_diagram.svg)
+
+The transducers must be connected in this way because the board can only read positive signals. If a load cell with 5 wires is used, the yellow or bare wire should be connected to the same terminal as the ground wire.
+
 ## LED Explanations
 ![LEDs](./media/led_diagram.svg)
 
