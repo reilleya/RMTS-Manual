@@ -87,7 +87,10 @@ This input enables the use of an external ignition system. Set up the applicatio
 | Edit Transducer Profile | Display and edit transducer calibrations.                                                                  |
 | About                   | View application and hardware info.                                                                        |
 ## Troubleshooting
-Coming Soon
+### My Results Aren't Right!
+Many factors can contribute to results not being what you expected. It is important to note that you can't assume that data is incorrect just because it deviates from your simulation, as the prediction itself could be wrong. For the first motor with a given propellant or a design that pushes limits in any way (high aspect ratio or mass flux, low port/throat, or pressure outside of characterized range), do not be surprised when the data returned is not what you or your simulation predicted. If a tame motor with a well-characterized propellant formula produces results outside of the expected range, or the system reports an impossible statistic (like an ISP of 300s), then it is time to suspect that something is off with it. Different categories of error are given in the following table along with explanations.
+
+
 ## Glossary
 * Transducer: A device that converts some value from the physical world into a signal. In this context, this usually refers to load cells and pressure sensors.
 * ADC: Analog to digital converter. The component on the board that reads from the transducers and outputs a corresponding number.
