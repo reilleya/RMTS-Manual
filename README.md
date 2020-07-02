@@ -99,3 +99,6 @@ Many factors can contribute to results not being what you expected. It is import
 * Receiver: The smaller device that connects to a user's computer.
 * Transmitter: The larger device that the igniter and transducers are connected to.
 * Data Age: Time since the last packet was received from the board. It will hover near zero when the radio connection is strong. If it consistently reaches multiple seconds, many packets are being dropped and the connection is weak. 
+
+## Disclaimer
+Though this system was designed with safety in mind and proven with thorough testing, its output should be verified before each use to ensure it was configured correctly and that it hasn't been damaged. By using the device, you affirm that you understand the proper operation of the system and accept responsibilty for any loss of property, injury, or death that may occur as a result of using RMTS. The creators of the device shall not be held liable for any damage it may cause due to the inherent risks associated with the operation of solid rocket motors.
