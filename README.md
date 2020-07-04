@@ -10,14 +10,6 @@ To assemble and use the system for a series of static fires, follow [this](https
 ## Board Dimensions
 ![Dimensions](./media/drill_pattern.svg)
 
-## Connection Diagram
-![Connnections](./media/all_connectors.svg)
-
-## Transducer Connection
-![Transducer Connections](./media/transducer_diagram.svg)
-
-The transducers must be connected in this way because the board can only read positive signals. If a load cell with 5 wires is used, the yellow or bare wire should be connected to the same terminal as the ground wire.
-
 ## LED Explanations
 ![LEDs](./media/led_diagram.svg)
 
@@ -34,6 +26,17 @@ The main RMTS board has four LEDs to indicate system status. The first is the `P
 ## Setup
 ### Hardware
 Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#connection-diagram). All system functions require an SD card to be installed. Note that the pyro battery and transducers require a specific polarity! The system may be damaged or produce incorrect results if they are not connected properly. For this reason and to protect the transmitter from damage during tests, it is recommended to mount it in a project enclosure and to attach connectors to the screw terminals so transducers can be plugged in easily. The transmitter is powered by the USB port and will work with any USB backup battery. The included antennas can be swapped for other RP-SMA 2.4 ghz antennas if needed. 
+#### Connection Diagram
+![Connnections](./media/all_connectors.svg)
+
+#### Transducer Connection
+![Transducer Connections](./media/transducer_diagram.svg)
+
+The transducers must be connected in this way because the board can only read positive signals. If a load cell with 5 wires is used, the yellow or bare wire should be connected to the same terminal as the ground wire.
+
+#### Radio Setup
+The included radio modules operate in the 2.4 GHz band and can be used without any special licensing. Each radio is paired to only communicate with the other module it was shipped with, so it is safe to operate multiple units simultaneously. The included antennas can be replaced with other 2.4 GHz RP-SMA antennas if the range that the unit is being used at exceeds what the stock configuration allows. 
+
 ### Software
 Install the RMTS application on a computer that is convenient to bring to your test site and has at least one USB A port. The latest version can be downloaded [here](https://github.com/reilleya/RMTS-Software/releases). An installer is available for Windows and an executable for Mac OS, but Linux users will have to follow instructions in the readme for that repository. Once the application is installed, configure the desired units on the `Preferences` menu and then proceed to calibration.
 ## Calibration
