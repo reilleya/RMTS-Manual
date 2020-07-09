@@ -48,7 +48,14 @@ The transducers that RMTS is designed to work with output a voltage that corresp
 ### RMTS Calibration Workflow
 The RMTS application provides a workflow that collects the data required to perform a transducer calibration. It can be accessed by pressing the `Calibrate Transducers` button on the main menu. On the next screen, enter a name for the transducer calibration and select the type (Load Cell or Pressure Transducer). Next, connect the transducer you are looking to calibrate to your transmitter according to the connection diagram. Power on the transmitter and make sure it is nominal (SD inserted) before connecting the receiver to your computer, refreshing the list of ports, and pressing connect. If everything is set up properly the `Data Age` field will stay close to 0 and no error will be displayed. Press the `Next` button, which will be enabled at this point.
 
+![Calibration Setup](./media/calibration/calibration_setup.png)
+
 You are now on the main calibration screen. This screen displays the last raw value read from the transducer selected on the previous screen in the top left of the window in a unitless field. Next to it is a button that allows you to "capture" the current value that the transducer is outputting and add it to the table below. You can also capture transducer values with the space bar. To calibrate the transducer, apply a series of known inputs and capture each, then enter the corresponding measurement in real units. For example, if you have a pressure transducer attached to a regulated gas supply, you could set the regulator for 200 PSI, click `Capture`, and then type `200` next to the raw value in the table. When a point has both a raw and a real value associated with it, it will be plotted in the graph. When at least three points have been entered, the software will calculate a line of best fit for them and plot it over them. It will also show the current real value obtained by converting the last transducer reading it has received through the calibration that has been made. More points are better! Once you are satisfied with the calibration, press `Save` and the calibration will be recorded.
+
+![Calibration Empty](./media/calibration/calibration_empty.png)
+
+![Calibration Regression](./media/calibration/calibration_with_regression.png)
+
 ### Calibration Tips
 * Being careful with this process is important because the data you get from the system is only as good as the calibration you perform.
 * Though a two points define a line and are technically all that is needed to perform a calibration, the RMTS software doesn't allow you to save a calibration that has less than three points. This is because each point has some associated measurement error, but the more points you enter, the less impact this noise has.
