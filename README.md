@@ -104,6 +104,14 @@ This input enables the use of an external ignition system. Set up the applicatio
 ### My Results Aren't Right!
 Many factors can contribute to results not being what you expected. It is important to note that you can't assume that data is incorrect just because it deviates from your simulation, as the prediction itself could be wrong. For the first motor with a given propellant or a design that pushes limits in any way (high aspect ratio or mass flux, low port/throat, or pressure outside of characterized range), do not be surprised when the data returned is not what you or your simulation predicted. If a tame motor with a well-characterized propellant formula produces results outside of the expected range, or the system reports an impossible statistic (like an ISP of 300s), then it is reasonable to suspect that it is at fault. Different categories of error are given in the following table along with explanations.
 
+### The system gives me an error code on startup
+The error codes are explained in the application, but these explantions are copied here for convenience.
+| Error | Meaning               | Resolution                                                                                                                                        |
+|-------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0.1   | No SD card detected   | Install an SD card or remove and replace the currently installed one. If it still doesn't work, try a different card.                             |
+| 0.2   | SD card unwritable    | The SD card cannot be written to. It might be formatted incorrectly, as the system can only work with FAT32-formatted cards. Try reformatting it. |
+| 0.3   | Too many logs         | The SD card contains more than 256 log files. Remove them from the SD card to continue.                                                           |
+| 1.1   | ADC self check failed | The onboard analog-to-digital converter needed to read from transducers has failed. This will likely require a repair.                            |
 
 ## Glossary
 * Transducer: A device that converts some value from the physical world into a signal. In this context, this usually refers to load cells and pressure sensors.
