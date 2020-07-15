@@ -4,7 +4,7 @@ RMTS is a complete set of test stand electronics in a single device for amateur 
 ## Components
 The system consists of a transmitter, receiver, and an application that is run on the user's computer. The transmitter is the larger of the two circuit boards included in the system and has terminal blocks around the edge for connecting transducers and the igniter. The receiver is the smaller board and has two connectors, one USB port for connecting to the user's computer and an RP-SMA jack for the antenna. The software can be downloaded from [here](https://github.com/reilleya/RMTS-Software/releases).
 ## Using RMTS
-Before using RMTS for the first time you will need to calibrate it. More information about what that entails it found [here](https://github.com/reilleya/RMTS-Manual#calibration).
+You will need to calibrate the system before using it for the first time, or if using a new transducer. This process is explained [here](https://github.com/reilleya/RMTS-Manual#calibration).
 To assemble and use the system for a series of static fires, follow [this](https://github.com/reilleya/RMTS-Manual#firing-procedure) guide.
 
 ## Board Dimensions
@@ -14,7 +14,7 @@ To assemble and use the system for a series of static fires, follow [this](https
 ![LEDs](./media/led_diagram.svg)
 
 
-The main RMTS board has four LEDs to indicate system status. The first is the `Power` indicator, which turns on as soon as the board is connected to a 5V supply. Next to it is the `Status` light, which has a number of blink patterns to show which state the board is currently in. The `Continuity` LED indicates that the system has detected continuity through the igniter circuit, including both the pyro battery and the igniter itself. Finally, the `Firing` indicator shows if the igniter port has a voltage across it. Never connect the igniter while this light is on. If it is on unexpectedly, your RMTS has been damaged. Next to each LED is a pair of through-holes that an external LED can be connected to.
+The transmitter has four LEDs to indicate system status. The first is the `Power` indicator, which turns on as soon as the board is connected to a 5V supply. Next to it is the `Status` light, which has a number of blink patterns to show which state the board is currently in. The `Continuity` LED indicates that the system has detected continuity through the igniter circuit, including both the pyro battery and the igniter itself. Finally, the `Firing` indicator shows if the igniter port has a voltage across it. Never connect the igniter while this light is on. If it is on unexpectedly, your RMTS has been damaged. Next to each LED is a pair of through-holes that an external LED can be connected to.
 
 #### Status LED Blink Patterns
 | Pattern                  | Explanation                                                                                                                                 |
@@ -25,7 +25,7 @@ The main RMTS board has four LEDs to indicate system status. The first is the `P
 | Slow Blinking            | System is in `results` state. The results can be viewed in the application. It can be safely powered off as the results are on the SD card. |
 ## Setup
 ### Hardware
-Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#connection-diagram). All system functions require an SD card to be installed. Note that the pyro battery and transducers require a specific polarity! The system may be damaged or produce incorrect results if they are not connected properly. For this reason and to protect the transmitter from damage during tests, it is recommended to mount it in a project enclosure and to attach connectors to the screw terminals so transducers can be plugged in easily. The transmitter is powered by the USB port and will work with any USB backup battery.
+Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#connection-diagram). All system functions require an SD card to be installed, and the board will enter an [error state](https://github.com/reilleya/RMTS-Manual#the-system-gives-me-an-error-code-on-startup) if one isn't detected. Note that the pyro battery and transducers require a specific polarity! The system may be damaged or produce incorrect results if they are not connected properly. For this reason, and to protect the transmitter from damage during tests, it is recommended to mount it in a project enclosure and to attach connectors to the screw terminals so transducers can be plugged in easily. The transmitter is powered by the USB port and will work with any USB backup battery.
 #### Connection Diagram
 ![Connnections](./media/all_connectors.svg)
 
@@ -33,6 +33,9 @@ Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#con
 ![Transducer Connections](./media/transducer_diagram.svg)
 
 The transducers must be connected in this polarity because the board can only read positive signals. If a load cell with 5 wires is used, the yellow or bare wire should be connected to the same terminal as the ground wire.
+
+#### Pyro Circuit Setup
+The transmitter's built in ignition system features a single pyro channel that requires two connections. One to a pyro battery (separate from the USB power source) and the other to the igniter itself. The system can handle pyro batteries up to 30v, but much less is required for most igniters. The recommended battery for e-match based igniters is a 1s LiPo with a capacity of at least 500 mAh to support many firings between charges. Note that polarity is important for the pyro battery connection, and that connecting a battery incorrectly can damage the transmitter.
 
 #### Radio Setup
 The included radio modules operate in the 2.4 GHz band and can be used without any special licensing. Each radio is paired to only communicate with the other module it was shipped with, so it is safe to operate multiple units simultaneously. The included antennas can be replaced with other 2.4 GHz RP-SMA antennas if the range that the unit is being used at exceeds what the stock configuration allows. 
@@ -67,7 +70,7 @@ Once you are satisfied with the calibration, press `Save` and the calibration wi
 * Look for sources of error in your calibration method and attempt to correct them. For example, a common procedure for calibrating load cells is to stack objects of known weight on the load cell to produce a variety of inputs. There is nothing wrong with this method in theory, but in practice it can be difficult to balance the items on the load cell, which can lead to them leaning on something other than the load cell. This means that not all of their force is transfered into the load cell, which will lead to your calibration overestimating the force applied during tests. To avoid this, use a beam-type load cell (which is easier to attach masses to), or place your load cell on the reference scale, tare it, and then apply the weights as before. Though they will likely have to lean against something for support, this no longer matters as the same force is being transmitted through the load cell and the scale so it can be measured accurately.
 
 ## Firing Procedure
-Once the transducers have been calibrated the system is ready for a firing and can be integrated into the motor and test stand as shown in the connection diagram [above](https://github.com/reilleya/RMTS-Manual#connection-diagram). The transducers should be connected first and then the main board power applied. Start the RMTS application on your computer and navigate to `Setup Firing`.
+Once the transducers have been calibrated the system is ready for a firing and can be integrated into the motor and test stand as shown in the connection diagram [above](https://github.com/reilleya/RMTS-Manual#connection-diagram). The transducers should be connected first and then USB power. Start the RMTS application on your computer and navigate to `Setup Firing`.
 
 ![Early setup](./media/firing/setup.png)
 
@@ -115,7 +118,7 @@ This input enables the use of an external ignition system. Set up the applicatio
 | About                   | View application and hardware info.                                                                        |
 ## Troubleshooting
 ### My Results Aren't Right!
-Many factors can contribute to results not being what you expected. It is important to note that you can't assume that data is incorrect just because it deviates from your simulation, as the prediction itself could be wrong. For the first motor with a given propellant or a design that pushes limits in any way (high aspect ratio or mass flux, low port/throat, or pressure outside of characterized range), do not be surprised when the data returned is not what you or your simulation predicted. If a tame motor with a well-characterized propellant formula produces results outside of the expected range, or the system reports an impossible statistic (like an ISP of 300s), then it is reasonable to suspect that it is at fault. Different categories of error are given in the following table along with explanations.
+Many factors can contribute to results not being what you expected. It is important to note that you can't assume that data is incorrect just because it deviates from your simulation, as the prediction itself could be wrong. For the first motor with a given propellant, or a design that pushes limits in any way (high aspect ratio or mass flux, low port/throat, or pressure outside of characterized range), do not be surprised when the data returned is not what you or your simulation predicted. If a tame motor with a well-characterized propellant formula produces results outside of the expected range, or the system reports an impossible statistic (like an ISP of 300s), then it is reasonable to suspect that it is at fault. Different categories of error are given in the following table along with explanations.
 
 ### The system gives me an error code on startup
 The error codes are explained in the application, but these explantions are copied here for convenience.
@@ -127,8 +130,8 @@ The error codes are explained in the application, but these explantions are copi
 | 1.1   | ADC self check failed | The onboard analog-to-digital converter needed to read from transducers has failed. This will likely require a repair.                            |
 
 ## Glossary
-* Transducer: A device that converts some value from the physical world into a signal. In this context, this usually refers to load cells and pressure sensors.
-* ADC: Analog to digital converter. The component on the board that reads from the transducers and outputs a corresponding number.
+* Transducer: A device that converts some value from the physical world into a signal. In this context, it usually refers to load cells and pressure sensors.
+* ADC: Analog to digital converter. The component on the board that reads the signal from the transducers and outputs a corresponding number.
 * Raw Value: A value directly output by the ADC. Corresponds to a voltage read from a transducer.
 * Converted Value: A value in real-world units obtained by passing a raw value through a calibration function. 
 * Receiver: The smaller device that connects to a user's computer.
