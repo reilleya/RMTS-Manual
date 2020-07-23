@@ -6,6 +6,7 @@ The system consists of a transmitter, receiver, and an application that is run o
 ## Using RMTS
 You will need to calibrate the system before using it for the first time, or if using a new transducer. This process is explained [here](https://github.com/reilleya/RMTS-Manual#calibration).
 To assemble and use the system for a series of static fires, follow [this](https://github.com/reilleya/RMTS-Manual#firing-procedure) guide.
+Be sure you have read and are familiar with all parts of this guide before setting up the system. It is a good idea to do a practice firing with a lightbulb or bare ematch connected to the pyro channel to check that the system is set up properly and that you understand it how to use it.
 
 ## Board Dimensions
 ![Dimensions](./media/drill_pattern.svg)
@@ -32,7 +33,7 @@ Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#con
 #### Transducer Connection
 ![Transducer Connections](./media/transducer_diagram.svg)
 
-The transducers must be connected in this polarity because the board can only read positive signals. If a load cell with 5 wires is used, the yellow or bare wire should be connected to the same terminal as the ground wire.
+The transducers must be connected with this polarity because the board can only read positive signals. If a load cell with 5 wires is used, the yellow or bare wire should be connected to the same terminal as the ground wire.
 
 #### Pyro Circuit Setup
 The transmitter's built in ignition system features a single pyro channel that requires two connections. One to a pyro battery (separate from the USB power source) and the other to the igniter itself. The system can handle pyro batteries up to 30v, but much less is required for most igniters. The recommended battery for e-match based igniters is a 1s LiPo with a capacity of at least 500 mAh to support many firings between charges. Note that polarity is important for the pyro battery connection, and that connecting a battery incorrectly can damage the transmitter.
@@ -137,6 +138,9 @@ The error codes are explained in the application, but these explanations are cop
 
 ### I had a motor misbehave and it shut the system off before I could press stop. Is my data gone?
 There is probably a way to get it back. Data is written to the SD card approximately every 400 ms so as long as the test lasted longer than that before the system lost power, there should be a data file on the SD card that the software can process. Even if the test ended in less time than that or really catastrophically and destroyed the SD card, the transmitter continuously sends out some of the data it gathers during the firing, which is picked up by the application and logged into a special file. A log of all firings is available at `C:\Users\{USERNAME}\AppData\Local\RMTS\RMTS\firings.bak` on Windows, `/Users/{USERNAME}/Library/Application Support/RMTS/firings.bak` on Mac OS, and `/home/{USERNAME}/.local/share/RMTS/firings.bak` on a typical Linux installation. This data will probably not include all 150 samples per second that would be in the data log on the SD card, as the number of datapoints in the backup file is dependent on the strength of the radio link during the firing. Still, it is a good last resort to have and can be very informative in diagnosing failures when paired with the partial data from the SD card if it is available. Don't hesitate to reach out if you need help processing backup data.
+
+### The radio link is too weak
+First, make sure that the radio is seated onto the transmitter properly and that the antennas are screwed tightly onto both the receiver and the transmitter. If everything is set up properly, you can improve the range by making sure both antennas are far off of the ground. The ground and other objects on it can absorb the signals that the radios emit, so try putting the transmitter on a stand if you need more range. The receiver can be held up to improve reception. Though this should always be the case when firing a motor, make sure there is good line of sight between the two radios. If all else fails, you can try a different 2.4 GHz with better gain.   
 
 ## Glossary
 * Transducer: A device that converts some value from the physical world into a signal. In this context, it usually refers to load cells and pressure sensors.
