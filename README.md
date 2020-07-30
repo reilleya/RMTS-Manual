@@ -25,6 +25,15 @@ The transmitter has four LEDs to indicate system status. The first is the `Power
 | Off                      | System is in `fire` state. Stop it in the application to view results.                                                                      |
 | Slow Blinking            | System is in `results` state. The results can be viewed in the application. It can be safely powered off as the results are on the SD card. |
 ## Setup
+### Additional Tools
+You will need these supplies beyond what is included in the RMTS kit:
+* A MicroSD card, formatted FAT32
+* A USB power supply, like a backup battery for a phone
+* Two mini USB cables
+* A pyro battery capable of firing your igniter
+* A small flathead screwdriver for screw terminals
+* Your motor(s), igniter(s), and test stand
+
 ### Hardware
 Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#connection-diagram). All system functions require an SD card to be installed, and the board will enter an [error state](https://github.com/reilleya/RMTS-Manual#the-system-gives-me-an-error-code-on-startup) if one isn't detected. Note that the pyro battery and transducers require a specific polarity! The system may be damaged or produce incorrect results if they are not connected properly. For this reason, and to protect the transmitter from damage during tests, it is recommended to mount it in a project enclosure and to attach connectors to the screw terminals so transducers can be plugged in easily. The transmitter is powered by the USB port and will work with any USB backup battery.
 #### Connection Diagram
