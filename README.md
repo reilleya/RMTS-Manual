@@ -44,6 +44,8 @@ Follow the connection diagram [here](https://github.com/reilleya/RMTS-Manual#con
 
 The transducers must be connected with this polarity because the board can only read positive signals. If a load cell with 5 wires is used, the yellow or bare wire should be connected to the same terminal as the ground wire.
 
+When integrating a pressure transducer into a motor, make sure it isn't directly exposed to combustion products as this will quickly damage it. Instead, install it into a pipe attached to the forward closure and pack the pipe with grease. The grease will insulate the pressure transducer but still transmit pressure to it. 
+
 #### Pyro Circuit Setup
 The transmitter's built in ignition system features a single pyro channel that requires two connections. One to a pyro battery (separate from the USB power source) and the other to the igniter itself. The system can handle pyro batteries up to 30v, but much less is required for most igniters. The recommended battery for e-match based igniters is a 1s LiPo with a capacity of at least 500 mAh to support many firings between charges. Note that polarity is important for the pyro battery connection, and that connecting a battery incorrectly can damage the transmitter. Be sure to attach the igniter to something or have a way for it to easily disconnect from the transmitter, otherwise it can lead to the board being knocked loose or pull into the exhaust when the igniter is ejected as the motor comes up to pressure. I usually wrap the leads around a bolt in the test stand a couple of times to avoid this.
 
