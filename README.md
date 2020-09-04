@@ -11,6 +11,8 @@ Be sure you have read and are familiar with all parts of this guide before setti
 ## Board Dimensions
 ![Dimensions](./media/drill_pattern.svg)
 
+![Dimensions](./media/receiver_drill_pattern.svg)
+
 ## LED Explanations
 ![LEDs](./media/led_diagram.svg)
 
