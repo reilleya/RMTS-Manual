@@ -24,8 +24,9 @@ The transmitter has four LEDs to indicate system status. The first is the `Power
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Two Fast Blinks          | System is in `setup` state. It is for a firing or calibration.                                                                              |
 | Constant, Rapid Blinking | System is in `error` state. Connect to it with the radio for more details.                                                                  |
-| Off                      | System is in `fire` state. Stop it in the application to view results.                                                                      |
+| On                       | System is in `fire` state. Stop it in the application to view results.                                                                      |
 | Slow Blinking            | System is in `results` state. The results can be viewed in the application. It can be safely powered off as the results are on the SD card. |
+| Off                      | There may be an issue with your power source or RMTS.                                                                                       |
 ## Setup
 ### Additional Tools
 You will need these supplies beyond what is included in the RMTS kit:
